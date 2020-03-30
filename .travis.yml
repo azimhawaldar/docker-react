@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t azimh/docker-react -f Dockerfile
+  - docker build -t azimh/docker-react -f Dockerfile .
 
 script:
   - docker run -e CI=true azimh/docker-react npm run test -- --coverage
